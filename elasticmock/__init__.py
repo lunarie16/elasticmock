@@ -5,7 +5,7 @@ from functools import wraps
 from elasticsearch.client import _normalize_hosts
 from mock import patch
 
-from elasticmock.fake_elasticsearch import FakeElasticsearch
+from .fake_elasticsearch import FakeElasticsearch
 
 ELASTIC_INSTANCES = {}
 
