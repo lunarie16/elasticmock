@@ -95,6 +95,10 @@ class FakeQueryCondition:
             return self._evaluate_for_compound_query_type(document)
         elif self.type == QueryType.FILTER:
             return self._evaluate_for_compound_query_type(document)
+        elif self.type == QueryType.SHOULD:
+            return self._evaluate_for_compound_query_type(document)
+        elif self.type == QueryType.MINIMUM_SHOULD_MATCH:
+            return self._evaluate_for_compound_query_type(document) 
         else:
             raise NotImplementedError('Fake query evaluation not implemented for query type: %s' % self.type)
 
